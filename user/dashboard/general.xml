@@ -1,0 +1,16 @@
+<container direction="row">
+  <container direction="col">
+    <chart type="bar">
+      <data source="eu/AT_COL_AVG_3Y.json" id="avg_3y" key="value" />
+      <data source="eu/AT_COL_HH_KG_HAB.json" id="avg_hab" key="value" />
+      <item dataKey="avg_3y" stackId="1" />
+      <item dataKey="avg_hab" stackId="1" />
+      </chart> 
+ 
+    </container>
+
+  <text>
+    # Hello
+    Mein name ist Ankush und ich bin 12 Jahre alt
+    </text>
+  </container>
