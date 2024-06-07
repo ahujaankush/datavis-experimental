@@ -1,3 +1,5 @@
+"use client"
+
 import {
   LineChart as Chart,
   Line,
@@ -11,6 +13,8 @@ import { ScaleType } from "recharts/types/util/types";
 import { v4 as uuidv4 } from "uuid";
 import { GenericChartProps, XAxies, XAxiesProps } from "./chart";
 import { CurveType } from "recharts/types/shape/Curve";
+
+const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300", "#ff3860"];
 
 export default function LineChart({
   data,
@@ -40,7 +44,7 @@ export default function LineChart({
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxies {...xAxies} />
-        <YAxis scale={scale} />
+        <YAxis scale={scale} axisLine={false} fontSize={12} tickLine={false} />
         <Tooltip />
         <Legend />
         {yAxies.map((e, i) => (
@@ -49,7 +53,7 @@ export default function LineChart({
             type={e.type}
             dataKey={e.dataKey}
             name={e.name}
-            stroke={e.strokeColor}
+            stroke={e.strokeColor || colors.at(i % colors.length)}
             strokeWidth={e.strokeWidth}
             unit={e.unit}
             activeDot={{ r: 8 }}

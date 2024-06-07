@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AreaChart as Chart,
   YAxis,
@@ -11,6 +13,8 @@ import { ScaleType } from "recharts/types/util/types";
 import { v4 as uuidv4 } from "uuid";
 import { GenericChartProps, XAxies, XAxiesProps } from "./chart";
 import { CurveType } from "recharts/types/shape/Curve";
+
+const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300", "#ff3860"];
 
 export default function AreaChart({
   data,
@@ -26,7 +30,7 @@ export default function AreaChart({
   })[];
   scale?: ScaleType;
 }) {
-  console.log(data)
+  console.log(data);
   return (
     <ResponsiveContainer width="100%" height="100%">
       <Chart
@@ -42,8 +46,8 @@ export default function AreaChart({
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxies {...xAxies} />
-        <YAxis scale={scale} />
-        <Tooltip />
+        <YAxis scale={scale} axisLine={false} fontSize={12} tickLine={false} />
+        <Tooltip wrapperClassName="fg-secondary" />
         <Legend />
         {yAxies.map((e, i) => {
           return (
@@ -52,7 +56,8 @@ export default function AreaChart({
               dataKey={e.dataKey}
               type={e.type}
               name={e.name}
-              stroke={e.strokeColor}
+              fill={e.strokeColor || colors.at(i % colors.length)}
+              stroke={e.strokeColor || colors.at(i % colors.length)}
               strokeWidth={e.strokeWidth}
               unit={e.unit}
               activeDot={{ r: 8 }}

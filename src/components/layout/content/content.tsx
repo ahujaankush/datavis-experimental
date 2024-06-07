@@ -53,8 +53,8 @@ function combine(
   a: object[],
   b: object[],
   key: string,
-  injectKey: string,
-  injectedKey: string,
+  oldValueKey: string,
+  newValueKey: string,
 ) {
   // externes
   a.forEach((e) => {
@@ -65,7 +65,7 @@ function combine(
         f[key as keyof object] &&
         e[key as keyof object] === f[key as keyof object]
       ) {
-        b[i] = { ...f, [injectKey]: e[injectedKey as keyof object] };
+        b[i] = { ...f, [newValueKey]: e[oldValueKey as keyof object] };
         found = true;
         return false;
       }
@@ -74,7 +74,7 @@ function combine(
     if (!found) {
       b.push({
         [key]: e[key as keyof object],
-        [injectKey as keyof object]: e[injectedKey as keyof object],
+        [newValueKey as keyof object]: e[oldValueKey as keyof object],
       });
     }
   });
@@ -92,11 +92,11 @@ export function Chart({ content }: { content: ParsedXMLType }) {
           .then((res) =>
             setData((old) => {
               return combine(
+                res.data,
                 old,
-              res.data,
                 "year" as any,
-                e.attributes.id,
                 e.attributes.key,
+                e.attributes.id,
               );
             }),
           );

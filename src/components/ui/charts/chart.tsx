@@ -1,3 +1,5 @@
+"use client"
+
 import { XAxis } from "recharts";
 import { ScaleType } from "recharts/types/util/types";
 
