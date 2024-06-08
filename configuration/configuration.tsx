@@ -41,44 +41,41 @@ const configuration: Configuration = {
       title: "General",
       pages: [
         {
-          title: "Austria",
+          title: "EU",
           description: "",
-          id: "general",
           icon: <></>,
           content: [
             {
-              title: "Vienna",
+              title: "Collected",
               description: "",
               icon: <></>,
-              content: [
-                {
-                  title: "20. District",
-                  description: "",
-                  icon: <></>,
-                  id: "general",
-                },
-                {
-                  title: "10. District",
-                  description: "",
-                  icon: <></>,
-                  id: "general/home",
-                },
-              ],
+              id: "eu/habitant",
+            },
+            {
+              title: "Treated",
+              description: "",
+              icon: <></>,
+              id: "eu/collected",
             },
           ],
         },
+      ],
+    },
+    {
+      title: "Country",
+      pages: [
         {
-          title: "Lower Austria",
+          title: "Germany",
           description: "",
+          id: "germany",
           icon: <></>,
-          id: "Lower Austria",
         },
         {
-          title: "Upper Austria",
+          title: "Austria",
           description: "",
-          icon: <></>,
-          id: "general/example",
-        },
+          id: "austria",
+          icon: <></>
+        }
       ],
     },
   ],

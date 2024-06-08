@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/layout/resizable";
 import Header from "./header/header";
 import Sidebar from "./sidebar/sidebar";
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import { atom, useAtom } from "jotai";
 import { searchDialogContentAtom } from "../dialog/search";
 import { configurationCompiler } from "@/lib/utils/ui";
@@ -22,7 +22,7 @@ export const pageRegisterAtom = atom<PageRegisterType>({});
 export const pageIdAtom = atom<string>(configuration.defaultPage);
 export const sidebarColapsedAtom = atom(false);
 
-export function Layout({children} : {children : React.ReactNode}) {
+export function Layout({ children }: { children: React.ReactNode }) {
   const [, setSearchDialogContent] = useAtom(searchDialogContentAtom);
   const [, setPageRegister] = useAtom(pageRegisterAtom);
 

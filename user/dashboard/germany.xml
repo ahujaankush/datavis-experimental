@@ -1,0 +1,15 @@
+<container direction="row">
+  <container direction="col">
+    <chart type="line">
+      <data source="eu/DE_COL_T.json" id="E-Waste Gesammelt" key="value" />
+      <data source="eu/DE_TRT_T.json" id="E-Waste Verarbeitet" key="value" />
+
+      <item dataKey="E-Waste Gesammelt" stackId="1" />
+      <item dataKey="E-Waste Verarbeitet" stackId="2" />
+
+    </chart>
+  </container>
+  <text>
+    # E-Waste Verarbeitung in Deutschland
+  </text>
+</container>

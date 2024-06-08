@@ -1,1 +1,8 @@
-[{"year": 2011, "value": 37.4}, {"year": 2012, "value": 38.6}, {"year": 2018, "value": 46.8}, {"year": 2019, "value": 48.8}, {"year": 2020, "value": 46.2}]
+[
+  { "year": 2011, "value": 37.4 },
+  { "year": 2012, "value": 38.6 },
+  { "year": 2018, "value": 46.8 },
+  { "year": 2019, "value": 48.8 },
+  { "year": 2020, "value": 46.2 }
+]
+

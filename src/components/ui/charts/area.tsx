@@ -47,7 +47,7 @@ export default function AreaChart({
         <CartesianGrid strokeDasharray="3 3" />
         <XAxies {...xAxies} />
         <YAxis scale={scale} axisLine={false} fontSize={12} tickLine={false} />
-        <Tooltip wrapperClassName="fg-secondary" />
+        <Tooltip labelClassName="fg-primary-foreground" />
         <Legend />
         {yAxies.map((e, i) => {
           return (
