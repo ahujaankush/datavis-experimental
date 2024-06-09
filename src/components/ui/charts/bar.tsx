@@ -40,7 +40,7 @@ export default function BarChart({
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey={xAxis.dataKey} spacing={10}>
+        <XAxis dataKey={xAxis.dataKey} spacing={10} type="category">
           <Label position="insideBottom" offset={-10} value={xAxis.label} />
         </XAxis>
         <YAxis scale={scale} axisLine={false} fontSize={12} tickLine={false} />

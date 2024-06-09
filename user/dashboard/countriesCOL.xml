@@ -1,0 +1,79 @@
+<container direction="row">
+    <container direction="col">
+        <chart type="bar" xAxis="year">
+            <data source="eu/AT_COL_KG_HAB.json" id="E-Waste Gesammelt Österreich" key="value" />
+            <data source="eu/FR_COL_KG_HAB.json" id="E-Waste Gesammelt Frankreich" key="value" />
+            <data source="eu/DE_COL_KG_HAB.json" id="E-Waste Gesammelt Deutschland" key="value" />
+
+            <item dataKey="E-Waste Gesammelt Österreich" stackId="1" />
+            <item dataKey="E-Waste Gesammelt Frankreich" stackId="2" />
+            <item dataKey="E-Waste Gesammelt Deutschland" stackId="3" />
+
+        </chart> 
+    </container>
+
+    <text>
+      # Übersicht
+
+        Die vorliegenden Daten zeigen die gesammelte Menge an Elektroschrott (E-Waste) pro 
+        Kopf in Kilogramm (kg) für die Länder Österreich (AT), Frankreich (FR) und 
+        Deutschland (DE) über einen Zeitraum von mehreren Jahren.
+
+        Österreich (AT)
+
+            Trend: Die Daten zeigen einen signifikanten Anstieg des gesammelten E-Waste pro Kopf 
+            von 2,35 kg im Jahr 2005 auf 38,58 kg im Jahr 2021.
+
+            Bemerkenswerte Anstiege:
+                Ein erheblicher Anstieg ist zwischen 2018 und 2019 zu verzeichnen, wo der 
+                Wert von 13,17 kg auf 37,62 kg anstieg.
+
+                2020 erreichte der Wert mit 39,41 kg seinen Höhepunkt.
+
+            Schwankungen: Zwischen 2009 und 2016 stagnierte der Wert relativ konstant um 9 kg, 
+            bevor der drastische Anstieg in den darauffolgenden Jahren einsetzte.
+
+        Frankreich (FR)
+
+            Trend: Auch hier ist ein deutlicher Anstieg zu erkennen, von 0,24 kg im Jahr 2006 
+            auf 36,37 kg im Jahr 2021.
+
+            Bemerkenswerte Anstiege:
+                Besonders auffällig ist der Sprung von 2018 (12,13 kg) zu 2019 (30,88 kg).
+                Die gesammelte Menge stabilisierte sich danach bei etwa 30 kg und stieg dann 
+                auf 36,37 kg im Jahr 2021.
+
+            Schwankungen: Der Anstieg ist bis 2018 relativ stetig, ohne größere Einbrüche.
+
+        Deutschland (DE)
+
+            Trend: Deutschland zeigt ebenfalls eine steigende Tendenz, allerdings weniger 
+            dramatisch im Vergleich zu AT und FR, mit einem Anstieg von 9,15 kg im Jahr 
+            2006 auf 27,91 kg im Jahr 2021.
+
+            Bemerkenswerte Anstiege:
+                Ein sprunghafter Anstieg ist von 2018 (10,29 kg) zu 2019 (26,64 kg) zu erkennen.
+                Der Wert erreichte seinen Höhepunkt im Jahr 2020 mit 28,71 kg und blieb 2021 
+                relativ stabil.
+
+            Schwankungen: Zwischen 2006 und 2017 schwanken die Werte leicht, bevor der Anstieg 
+            nach 2018 beginnt.
+
+        Zusammenfassung
+
+            Gemeinsame Trends: Alle drei Länder zeigen ab 2017 signifikante Anstiege in der 
+            Menge des gesammelten E-Wastes pro Kopf. Dies könnte auf verstärkte gesetzliche 
+            Maßnahmen, höhere Recyclingquoten oder erhöhte Umweltbewusstheit zurückzuführen sein.
+
+            Unterschiede:
+                Österreich und Frankreich verzeichnen dramatischere Anstiege im Vergleich zu 
+                Deutschland.
+
+                Frankreich begann auf einem sehr niedrigen Niveau und erreichte dennoch ähnliche 
+                Spitzenwerte wie Österreich.
+
+        Diese Daten verdeutlichen die steigende Bedeutung und den Erfolg von E-Waste-Sammelprogrammen 
+        in Europa. Der signifikante Anstieg in den letzten Jahren deutet auf eine verbesserte 
+        Sammlung und möglicherweise auch auf eine erhöhte elektronische Abfallproduktion hin.
+    </text>
+</container>

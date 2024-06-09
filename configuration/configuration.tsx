@@ -75,7 +75,13 @@ const configuration: Configuration = {
           description: "",
           id: "austria",
           icon: <></>
-        }
+        },
+        {
+          title: "Countries collected e-waste",
+          description: "",
+          id: "countriesCOL",
+          icon: <></>,
+        },
       ],
     },
   ],
