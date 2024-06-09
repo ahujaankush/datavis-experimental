@@ -1,6 +1,6 @@
 <container direction="row">
   <container direction="col">
-    <chart type="line">
+    <chart type="bar" xAxis="year">
       <data source="eu/DE_COL_T.json" id="E-Waste Gesammelt" key="value" />
       <data source="eu/DE_TRT_T.json" id="E-Waste Verarbeitet" key="value" />
 

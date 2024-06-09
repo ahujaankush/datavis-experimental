@@ -1,6 +1,6 @@
 <container direction="row">
   <container direction="col">
-    <chart type="bar">
+    <chart type="area" xAxis="year">
       <data source="eu/AT_TRT_T.json" id="E-Waste Verarbeitet" key="value" />
       <data source="eu/AT_TRT_NAT_T.json" id="In Österreich" key="value" />
       <data source="eu/AT_TRT_EU_FOR_T.json" id="EU Inland" key="value" />

@@ -80,8 +80,6 @@ export function pageRecursion(
       result.register[e.id] = newDump;
     }
 
-    console.log(result);
-
     if (e.content) {
       pageRecursion(e.content, result, newDump);
     }

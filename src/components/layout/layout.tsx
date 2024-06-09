@@ -45,7 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex grow w-screen h-screen flex-row">
-      <ResizablePanelGroup direction="horizontal">
+      <ResizablePanelGroup direction="horizontal" autoSaveId={'layout-general-split-sidebar'}>
         <ResizablePanel
           maxSize={40}
           defaultSize={18}

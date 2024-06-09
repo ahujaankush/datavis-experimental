@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ResizableHandle,
   ResizablePanel,
@@ -94,14 +96,14 @@ export function Chart({ content }: { content: ParsedXMLType }) {
               return combine(
                 res.data,
                 old,
-                "year" as any,
+                content.attributes.xAxis as any,
                 e.attributes.key,
                 e.attributes.id,
               );
             }),
           );
     });
-  }, [content.elements]);
+  }, [content.elements, content.attributes.xAxis]);
 
   console.log(data);
 
@@ -110,11 +112,11 @@ export function Chart({ content }: { content: ParsedXMLType }) {
       return (
         <AreaChart
           data={data}
-          xAxies={{ dataKey: "year" }}
-          yAxies={
+          xAxis={{ dataKey: content.attributes.xAxis }}
+          yAxis={
             content.elements?.flatMap((e) => {
-              if (e.name !== "item") return e;
-              return e.attributes ? [{ ...e.attributes }] : e;
+              if (e.name !== "item") return [];
+              return e.attributes ? [{ ...e.attributes }] : [];
             }) as any
           }
         />
@@ -123,13 +125,11 @@ export function Chart({ content }: { content: ParsedXMLType }) {
       return (
         <BarChart
           data={data}
-          xAxies={{ dataKey: "year" }}
-          yAxies={
+          xAxis={{ dataKey: content.attributes.xAxis }}
+          yAxis={
             content.elements?.flatMap((e) => {
-              if (e.name !== "item") return e;
-              return e.attributes
-                ? [{ ...e.attributes, data: data[e.attributes.id] }]
-                : e;
+              if (e.name !== "item") return [];
+              return e.attributes ? [{ ...e.attributes }] : [];
             }) as any
           }
         />
@@ -138,13 +138,11 @@ export function Chart({ content }: { content: ParsedXMLType }) {
       return (
         <LineChart
           data={data}
-          xAxies={{ dataKey: "year" }}
-          yAxies={
+          xAxis={{ dataKey: content.attributes.xAxis }}
+          yAxis={
             content.elements?.flatMap((e) => {
-              if (e.name !== "item") return e;
-              return e.attributes
-                ? [{ ...e.attributes, data: data[e.attributes.id] }]
-                : e;
+              if (e.name !== "item") return [];
+              return e.attributes ? [{ ...e.attributes }] : [];
             }) as any
           }
         />
@@ -155,7 +153,6 @@ export function Chart({ content }: { content: ParsedXMLType }) {
 }
 
 export default function Content({ content }: { content: ParsedXMLType[] }) {
-  console.log(content);
   return (
     <>
       {content.map((e, i) => {
