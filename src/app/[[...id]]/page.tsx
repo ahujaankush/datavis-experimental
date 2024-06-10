@@ -22,8 +22,8 @@ export default function Home({ params }: { params: { id: string[] } }) {
   }, [params, setPageId]);
 
   return (
-    <main className="flex grow">
-      <Content content={pageDefinition} />
-    </main>
+      <div className="flex grow">
+        <Content content={pageDefinition} />
+      </div>
   );
 }

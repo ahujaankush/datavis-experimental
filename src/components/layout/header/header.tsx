@@ -2,16 +2,22 @@
 
 import ActionGroup from "./group/action";
 import { Button } from "@/components/ui/basic/button";
-import { Moon, SearchIcon, Sun } from "lucide-react";
+import { CircleHelpIcon, Moon, SearchIcon, Sun } from "lucide-react";
 import { searchDialogVisibilityAtom } from "@/components/dialog/search";
 import { useAtom } from "jotai";
 import Breadcrumbs from "./breadcrumbs";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/menu/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/menu/dropdown-menu";
 import { useTheme } from "next-themes";
+import { useTour } from "@reactour/tour";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme()
- 
+  const { setTheme } = useTheme();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -33,27 +39,37 @@ export function ModeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }
 
 export default function Header() {
   const [, setSearchDialogVisibility] = useAtom(searchDialogVisibilityAtom);
+  const { setIsOpen: setTutorialVisibility } = useTour();
 
   return (
     <div className="flex px-5 border-b items-center h-14">
       <div className="flex grow justify-self-start items-center space-x-2">
         <Button
+          size="icon"
           variant="outline"
-          className="p-1 h-7 w-7"
           onClick={() => {
             setSearchDialogVisibility(true);
           }}
         >
-          <SearchIcon />
+          <SearchIcon className="h-[1.2rem] w-[1.2rem]" />
         </Button>
         <Breadcrumbs />
       </div>
       <div className="flex justify-items-center space-x-2 justify-self-end">
+        <Button
+          size="icon"
+          variant="outline"
+          onClick={() => {
+            setTutorialVisibility(true);
+          }}
+        >
+          <CircleHelpIcon className="h-[1.2rem] w-[1.2rem]" />
+        </Button>
         <ModeToggle />
         <ActionGroup />
       </div>

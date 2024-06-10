@@ -1,0 +1,12 @@
+<container direction="row">
+  <container direction="col">
+    <chart type="line" xAxis="year">
+      <data source="eu/EU_2020_TRT_NAT_T.json" id="In Europa" key="value" />
+      <item dataKey="In Europa" stackId="1" />
+    </chart> 
+  </container>
+
+  <text>
+    # Treated Waste in the Europe
+  </text>
+</container>

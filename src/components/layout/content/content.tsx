@@ -38,7 +38,9 @@ export function Container({ content }: { content: ParsedXMLType }) {
         : content.elements?.map((e, i) => {
             return (
               <>
-                <ResizablePanel>
+                <ResizablePanel className="!overflow-auto">
+
+      
                   <Content content={[e]} key={`${uuidv4()}-${i}`} />
                 </ResizablePanel>
                 {i + 1 < (content.elements?.length || 0) ? (

@@ -1,0 +1,12 @@
+<container direction="row">
+    <container direction="col">
+        <chart type="line" xAxis="year">
+            <data source="eu/EU_2020_COL_NAT_T.json" id="In Europa" key="value" />
+            <item dataKey="In Europa" stackId="1" />
+        </chart> 
+    </container>
+
+    <text>
+      # Collected Waste in Europe
+    </text>
+</container>

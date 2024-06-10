@@ -1,0 +1,25 @@
+<container direction="row">
+  <container direction="col">
+    <chart type="area" xAxis='year'>
+      <data source="eu/FR_TRT_T.json" id="E-Waste Verarbeitet" key="value" />
+      <data source="eu/FR_TRT_NAT_T.json" id="In Frankreich" key="value" />
+      <data source="eu/FR_TRT_EU_FOR_T.json" id="EU Inland" key="value" />
+      <data source="eu/FR_TRT_EU_FOR_T.json" id="EU Ausland" key="value" />
+      <data source="eu/FR_TRT_EU_FOR_T.json" id="Jahr" key="year" />
+
+
+      <item dataKey="E-Waste Verarbeitet" stackId="1" />
+      <item dataKey="In Frankreich" stackId="2" />
+      <item dataKey="EU Inland" stackId="3" />
+      <item dataKey="EU Ausland" stackId="4" />
+      <item dataKey="Jahr" stackId="5" />
+
+
+
+      </chart> 
+    </container>
+
+  <text>
+      # France Waste Summary
+    </text>
+  </container>

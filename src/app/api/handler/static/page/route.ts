@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ err: "parameter error" }, { status: 401 });
   }
 
-  const filePath = join(process.cwd(), "user", "dashboard", location);
+  const filePath = join(process.cwd(), "user", "dashboard", ...location.split("/"));
 
   try {
     const fileContent = readFileSync(filePath, "utf8");

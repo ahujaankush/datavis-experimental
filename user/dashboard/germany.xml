@@ -1,11 +1,15 @@
 <container direction="row">
   <container direction="col">
-    <chart type="bar" xAxis="year">
+    <chart type="line" xAxis='year'>
       <data source="eu/DE_COL_T.json" id="E-Waste Gesammelt" key="value" />
       <data source="eu/DE_TRT_T.json" id="E-Waste Verarbeitet" key="value" />
+      <data source="eu/DE_TRT_T.json" id="Jahr" key="year" />
+
 
       <item dataKey="E-Waste Gesammelt" stackId="1" />
       <item dataKey="E-Waste Verarbeitet" stackId="2" />
+      <item dataKey="Jahr" stackId="3" />
+
 
     </chart>
   </container>

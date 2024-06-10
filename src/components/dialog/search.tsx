@@ -5,7 +5,6 @@ import { Calendar } from "lucide-react";
 
 import {
   Command,
-  CommandDialog,
   CommandEmpty,
   CommandGroup,
   CommandInput,

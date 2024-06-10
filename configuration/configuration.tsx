@@ -41,6 +41,12 @@ const configuration: Configuration = {
       title: "General",
       pages: [
         {
+          title: "Interpretation",
+          description: "",
+          icon: <></>,
+          id: "interpretation"
+        },
+        {
           title: "EU",
           description: "",
           icon: <></>,
@@ -49,13 +55,13 @@ const configuration: Configuration = {
               title: "Collected",
               description: "",
               icon: <></>,
-              id: "eu/habitant",
+              id: "eu/collected",
             },
             {
               title: "Treated",
               description: "",
               icon: <></>,
-              id: "eu/collected",
+              id: "eu/treated",
             },
           ],
         },
@@ -65,17 +71,35 @@ const configuration: Configuration = {
       title: "Country",
       pages: [
         {
+          title: "Austria",
+          description: "",
+          id: "austria",
+          icon: <></>,
+        },
+        {
           title: "Germany",
           description: "",
           id: "germany",
           icon: <></>,
         },
         {
-          title: "Austria",
+          title: "Czech",
           description: "",
-          id: "austria",
-          icon: <></>
-        }
+          id: "czech",
+          icon: <></>,
+        },
+        {
+          title: "France",
+          description: "",
+          id: "france",
+          icon: <></>,
+        },
+        {
+          title: "Italy",
+          description: "",
+          id: "italy",
+          icon: <></>,
+        },
       ],
     },
   ],

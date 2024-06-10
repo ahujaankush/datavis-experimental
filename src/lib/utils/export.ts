@@ -78,14 +78,12 @@ export async function exportHandlerPDFMulti(
       const element = ref.content.current;
       if (element instanceof HTMLElement) {
         const dataUrl = await toPng(element, { cacheBust: true });
-        console.log("Original PNG Data URL:", dataUrl);
 
         const dataUrlWithWatermark = await addWatermark(
           dataUrl,
           "test.png",
           0.1
         ); // Set opacity to 50%
-        console.log("Watermarked PNG Data URL:", dataUrlWithWatermark);
 
         if (!dataUrlWithWatermark.startsWith("data:image/png")) {
           throw new Error("The watermarked data URL is not a valid PNG.");
@@ -127,10 +125,8 @@ export async function exportHandlerPDF(ref: any) {
 
   try {
     const dataUrl = await toPng(ref.current, { cacheBust: true });
-    console.log("Original PNG Data URL:", dataUrl);
 
     const dataUrlWithWatermark = await addWatermark(dataUrl, "test.png", 0.1); // Set opacity to 50%
-    console.log("Watermarked PNG Data URL:", dataUrlWithWatermark);
 
     if (!dataUrlWithWatermark.startsWith("data:image/png")) {
       throw new Error("The watermarked data URL is not a valid PNG.");
